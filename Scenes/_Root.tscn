@@ -1,3 +1,16 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/_Root.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Hud.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Colony.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Root_Ant.tscn" type="PackedScene" id=4]
 
 [node name="_Root" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Hud_Root" parent="." instance=ExtResource( 2 )]
+
+[node name="Colony" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="Ant" parent="Colony" instance=ExtResource( 4 )]
