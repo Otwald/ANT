@@ -14,3 +14,5 @@ script = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="Ant" parent="Colony" instance=ExtResource( 4 )]
+
+[node name="Ressources" type="Node" parent="."]
