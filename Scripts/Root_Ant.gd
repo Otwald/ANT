@@ -6,17 +6,14 @@ var health
 var max_stam
 var stam
 var colony
-
-# export (PackedScene) var Worker_Ant
+var home
 
 func _ready():
 	colony = self.get_parent().get_parent()
-	# var home = get_parent().orig_pos
 
 func _createAnt(stam : float, health, cost):
 	self.health = health
 	self.max_stam = stam
 	self.stam = stam
-	colony.food = colony.food - cost
-	print(colony.food)
-	# self.food =self.food - cost
+	self.home = colony.orig_pos
+	colony.food_update(-cost)
