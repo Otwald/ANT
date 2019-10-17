@@ -2,18 +2,21 @@ extends Node
 
 class_name Root_Ant
 
-export (PackedScene) var Worker_Ant
+var health
+var max_stam
+var stam
+var colony
 
-func _init():
-	print('Bla')
+# export (PackedScene) var Worker_Ant
+
+func _ready():
+	colony = self.get_parent().get_parent()
 	# var home = get_parent().orig_pos
 
-func _createAnt(stam, health, cost):
+func _createAnt(stam : float, health, cost):
 	self.health = health
 	self.max_stam = stam
 	self.stam = stam
-	self.food =self.food - cost
-
-func _ready():
-	var ant = Worker_Ant.instance()
-	add_child_below_node(ant, $Ant, true)
+	colony.food = colony.food - cost
+	print(colony.food)
+	# self.food =self.food - cost

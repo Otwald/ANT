@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "Colony",
+"language": "GDScript",
+"path": "res://Scripts/Colony.gd"
+}, {
+"base": "Node",
+"class": "Root_Ant",
+"language": "GDScript",
+"path": "res://Scripts/Root_Ant.gd"
+} ]
 _global_script_class_icons={
-
+"Colony": "",
+"Root_Ant": ""
 }
 
 [application]
