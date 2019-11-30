@@ -6,7 +6,7 @@ extends "Root_Ant.gd"
 # var max
 
 func _ready():
-	_createAnt(100, 50, 10)
+    _createAnt(100, 50, 10)
 # 	print('Hello Welt!')
 
 # func _ready():
