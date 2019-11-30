@@ -39,7 +39,7 @@ func move(aim, delta):
         velocity.y -= 1
     if velocity.length() > 0:
         velocity = velocity.normalized() * speed
-    
+
     self.position += velocity * delta
 
 

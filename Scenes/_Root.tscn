@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/_Root.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Hud.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Colony.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Root_Ant.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/colony.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/Ressources.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.74235
@@ -33,6 +34,6 @@ position = Vector2( 0.263885, -0.461795 )
 texture = ExtResource( 5 )
 
 [node name="Ressources" type="Node" parent="."]
+script = ExtResource( 6 )
 
-[node name="Food" parent="Ressources" instance=ExtResource( 6 )]
-pos = Vector2( 200, 200 )
+[node name="Food" parent="Ressources" instance=ExtResource( 7 )]
