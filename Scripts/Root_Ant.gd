@@ -7,6 +7,7 @@ var max_stam
 var stam
 var colony
 var home
+onready var ressources = get_node('/root/_Root/Ressources')
 
 func _ready():
     colony = self.get_parent().get_parent()
