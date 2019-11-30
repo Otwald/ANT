@@ -5,7 +5,8 @@ var stats = {
     'stam' : 100,
     'health': 50,
     'cost': 10,
-    'speed': 10
+    'speed': 10,
+    'capacity': 20
 }
 
 func _ready():
@@ -13,6 +14,6 @@ func _ready():
 
 func _process(delta):
     if aim == null:
-        aim = ressources.get_node('Food').position
+        aim = ressources.get_node('Food')
     else:
-        self.move(aim, delta)
+        self.move(aim.position, delta)

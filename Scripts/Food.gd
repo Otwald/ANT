@@ -3,13 +3,16 @@ extends Node
 export (float) var food_level = 100
 export (Vector2) var pos = Vector2(200, 200)
 
-# func _init():
-#     self.transform.position = pos
+var objectType = 'food'
+
 
 func _ready():
     self.position = pos
-    print(self.position)
+    self.connect('area_entered', self, 'updateRessource')
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func updateRessource(body):
+    if body.carry == false:
+        food_level -= body.capacity
+        body.carry = true
+        print(body.carry)
+        print(food_level)
