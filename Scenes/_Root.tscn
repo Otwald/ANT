@@ -19,4 +19,4 @@ script = ExtResource( 3 )
 [node name="Ressources" type="Node" parent="."]
 
 [node name="Food" parent="Ressources" instance=ExtResource( 5 )]
-pos = Vector2( 1000, 1000 )
+pos = Vector2( 200, 200 )

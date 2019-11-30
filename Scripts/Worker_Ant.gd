@@ -7,7 +7,6 @@ extends "Root_Ant.gd"
 
 func _ready():
     _createAnt(100, 50, 10)
-# 	print('Hello Welt!')
 
 # func _ready():
 # 	print(self.get_parent().get_name())
