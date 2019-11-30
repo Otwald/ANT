@@ -1,11 +1,10 @@
 extends "Root_Ant.gd"
 
-var aim = null
 var stats = {
     'stam' : 100,
     'health': 50,
     'cost': 10,
-    'speed': 10,
+    'speed': 50,
     'capacity': 20
 }
 
@@ -14,6 +13,9 @@ func _ready():
 
 func _process(delta):
     if aim == null:
-        aim = ressources.get_node('Food')
+        if carry:
+            aim = home
+        else:
+            aim = ressources.get_node('Food')
     else:
         self.move(aim.position, delta)

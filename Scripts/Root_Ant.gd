@@ -4,6 +4,7 @@ class_name Root_Ant
 
 # signal area_entered(body)
 
+var aim = null
 var objectType = 'ant'
 var health
 var max_stam
@@ -19,11 +20,11 @@ func _createAnt(stats):
     self.health = stats.health
     self.max_stam = stats.stam
     self.stam = stats.stam
-    self.home = colony.orig_pos
+    self.home = colony
     self.speed = stats.speed
     self.capacity = stats.capacity
     colony.food_update(-stats.cost)
-    self.connect('area_entered', self, "updateTest")
+    self.connect('area_entered', self, "updateAnt")
 
 
 func move(aim, delta):
@@ -42,12 +43,9 @@ func move(aim, delta):
     self.position += velocity * delta
 
 
-func updateTest(body):
+func updateAnt(body):
     print('oh no collision')
     if body.objectType == 'ant':
         print(body.health)
-    # carry = !carry
     if body.objectType == 'food':
-        print(body.food_level)
-    # $Hud_Root.get_node('Output').text = "Food :" + str($Colony.food)
-    
+        aim = null

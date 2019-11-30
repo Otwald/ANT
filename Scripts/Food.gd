@@ -11,8 +11,7 @@ func _ready():
     self.connect('area_entered', self, 'updateRessource')
 
 func updateRessource(body):
-    if body.carry == false:
-        food_level -= body.capacity
-        body.carry = true
-        print(body.carry)
-        print(food_level)
+    if body.objectType == 'ant':
+        if body.carry == false:
+            food_level -= body.capacity
+            body.carry = true
