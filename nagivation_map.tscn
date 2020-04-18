@@ -29,7 +29,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 0/z_index = 0
 
-[node name="nagivation_map" type="TileMap"]
+[node name="navigation_map" type="TileMap"]
 tile_set = SubResource( 2 )
 format = 1
 tile_data = PoolIntArray( 65537, 0, 0 )
