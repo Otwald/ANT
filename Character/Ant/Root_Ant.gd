@@ -13,7 +13,7 @@ var home
 var speed
 var capacity
 var carry = false
-onready var grid = get_node('/root/_Root/nagivation_map')
+onready var grid = get_node('/root/_Root/navigation_map')
 onready var ressources = get_node('/root/_Root/Ressources')
 onready var colony = get_node('/root/_Root/Colony')
 
