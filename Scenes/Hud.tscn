@@ -1,8 +1,0 @@
-[gd_scene format=2]
-
-[node name="Hud_Root" type="Node"]
-
-[node name="Output" type="Label" parent="."]
-margin_right = 142.0
-margin_bottom = 38.0
-text = "Food : "
