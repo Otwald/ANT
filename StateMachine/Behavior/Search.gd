@@ -1,4 +1,4 @@
-extends "res://StateMachine/Activity.gd"
+extends "res://StateMachine/Behavior/Activity.gd"
 class_name Search
 
 

@@ -1,5 +1,5 @@
 extends Node
-class_name BehaviorSM
+class_name StateMachine
 
 
 const DEBUG = true
@@ -9,18 +9,9 @@ var current_state = null
 
 onready var parent : KinematicBody2D = get_parent()
 onready var root : Node = get_node("/root/Root")
-onready var ressources : Node = get_node('/root/_Root/Ressources')
-onready var home : Area2D = get_node('/root/_Root/Colony')
 
 onready var states_map = {
-	'think' : $Think,
-	'carry': $Carry,
-	'search': $Search
 }
-
-func _ready():
-	current_state = $Think
-	_change_state('think')
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

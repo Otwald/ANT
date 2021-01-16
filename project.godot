@@ -12,7 +12,12 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Activity",
 "language": "GDScript",
-"path": "res://StateMachine/Activity.gd"
+"path": "res://StateMachine/Behavior/Activity.gd"
+}, {
+"base": "Node",
+"class": "BehaviorSM",
+"language": "GDScript",
+"path": "res://StateMachine/Behavior/BehaviorSM.gd"
 }, {
 "base": "Area2D",
 "class": "Colony",
@@ -27,13 +32,26 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Search",
 "language": "GDScript",
-"path": "res://StateMachine/Search.gd"
+"path": "res://StateMachine/Behavior/Search.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://StateMachine/State.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://StateMachine/StateMachine.gd"
 } ]
 _global_script_class_icons={
 "Activity": "",
+"BehaviorSM": "",
 "Colony": "",
 "Root_Ant": "",
-"Search": ""
+"Search": "",
+"State": "",
+"StateMachine": ""
 }
 
 [application]
