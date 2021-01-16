@@ -6,7 +6,7 @@ var rng = RandomNumberGenerator.new()
 func _init():
     rng.randomize()
 
-func _process(delta):
+func _process(_delta):
     # print(self.get_viewport_rect())
     if childs.empty():
         self.get_parent().ressource_Loader('Food','food')

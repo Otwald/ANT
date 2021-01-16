@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://StateMachine/BehaviorSM.gd" type="Script" id=1]
+[ext_resource path="res://StateMachine/Think.gd" type="Script" id=2]
+[ext_resource path="res://StateMachine/Search.gd" type="Script" id=3]
+[ext_resource path="res://StateMachine/Carry.gd" type="Script" id=4]
+
+[node name="BehaviorSM" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Think" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Search" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="Carry" type="Node" parent="."]
+script = ExtResource( 4 )

@@ -1,4 +1,4 @@
-extends "Root_Ant.gd"
+extends "res://Character/Ant/Root_Ant.gd"
 
 var stats = {
 	'stam' : 100,
