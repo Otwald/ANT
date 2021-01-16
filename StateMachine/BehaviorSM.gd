@@ -7,8 +7,10 @@ const DEBUG = true
 var states_stack = []
 var current_state = null
 
-onready var parent :Node = get_parent()
+onready var parent : KinematicBody2D = get_parent()
 onready var root : Node = get_node("/root/Root")
+onready var ressources : Node = get_node('/root/_Root/Ressources')
+onready var home : Area2D = get_node('/root/_Root/Colony')
 
 onready var states_map = {
 	'think' : $Think,

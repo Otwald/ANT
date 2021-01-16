@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Activity",
+"language": "GDScript",
+"path": "res://StateMachine/Activity.gd"
+}, {
 "base": "Area2D",
 "class": "Colony",
 "language": "GDScript",
@@ -18,10 +23,17 @@ _global_script_classes=[ {
 "class": "Root_Ant",
 "language": "GDScript",
 "path": "res://Character/Ant/Root_Ant.gd"
+}, {
+"base": "Node",
+"class": "Search",
+"language": "GDScript",
+"path": "res://StateMachine/Search.gd"
 } ]
 _global_script_class_icons={
+"Activity": "",
 "Colony": "",
-"Root_Ant": ""
+"Root_Ant": "",
+"Search": ""
 }
 
 [application]

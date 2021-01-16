@@ -3,17 +3,15 @@ extends TileMap
 ## Variables to be set when the node is ready
 
 # Reference to a new Astar navigation grid node
-onready var astar = AStar.new()
+onready var astar : AStar = AStar.new()
 
 # Used to find the centra of a tile
 onready var half_cell_size = cell_size /2
 
 # All tiles that can be used for pathfinding
-
 onready var traversable_tiles = get_used_cells()
 
 # The bounds of the reactangle containing all used tiles on this tilemap
-
 onready var used_rect = get_used_rect()
 
 func _ready():
@@ -85,13 +83,13 @@ func _get_id_for_point(point):
 
 ## Public functions
 
-# Returns a path from start to end
+# Returns a path from start to end as Array
 # These are real positions, not cell coordinates
-func get_pathf(start, end):
+func get_pathf(start: Vector2, end: Vector2): 
 
     # Convert positions to cell coordinates
-    var start_tile = world_to_map(start)
-    var end_tile = world_to_map(end)
+    var start_tile : Vector2 = world_to_map(start)
+    var end_tile : Vector2  = world_to_map(end)
 
     # Determines IDs
     var start_id = _get_id_for_point(start_tile)
@@ -105,7 +103,7 @@ func get_pathf(start, end):
     var path_map = astar.get_point_path(start_id, end_id)
 
     # Convert Vector3 array (remember, AStar is 3D) to real world points
-    var path_world = []
+    var path_world : Array = []
     for point in path_map:
         var point_world = map_to_world(Vector2(point.x, point.y)) + half_cell_size
         path_world.append(point_world)

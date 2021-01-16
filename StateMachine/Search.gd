@@ -1,16 +1,8 @@
-extends "res://StateMachine/State.gd"
+extends "res://StateMachine/Activity.gd"
+class_name Search
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func enter(_machine):
+	var resLoc = self.brain.ressources.get_children()
+	if not resLoc.empty():
+		self.path = self.createPath(resLoc[0].position)
