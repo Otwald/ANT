@@ -1,7 +1,5 @@
 extends StateMachine
 
-
-
 onready var local_states = {
 	'idle' : $Idle,
 	'walk': $Walk,
