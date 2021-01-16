@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/worker_ant.jpg-5227cb096b3ae3d146d0cf9b45226e1d.stex"
+path="res://.import/worker_ant.png-736e486fcf708478dedcb0580bbbb0ab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/worker_ant.jpg"
-dest_files=[ "res://.import/worker_ant.jpg-5227cb096b3ae3d146d0cf9b45226e1d.stex" ]
+source_file="res://Assets/Ant/worker_ant.png"
+dest_files=[ "res://.import/worker_ant.png-736e486fcf708478dedcb0580bbbb0ab.stex" ]
 
 [params]
 

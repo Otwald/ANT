@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Colony",
 "language": "GDScript",
-"path": "res://Scripts/Colony.gd"
+"path": "res://Colony/Colony.gd"
 }, {
 "base": "Node",
 "class": "Root_Ant",
 "language": "GDScript",
-"path": "res://Scripts/Root_Ant.gd"
+"path": "res://Character/Ant/Root_Ant.gd"
 } ]
 _global_script_class_icons={
 "Colony": "",
@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ANT"
-run/main_scene="res://Scenes/_Root.tscn"
+run/main_scene="res://_Root.tscn"
 config/icon="res://icon.png"
 
 [rendering]
